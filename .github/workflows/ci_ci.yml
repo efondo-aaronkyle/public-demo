@@ -31,6 +31,7 @@ jobs:
             python app.py &
             sleep 3 
             curl -f http://127.0.0.1:5000
+            curl -f http://127.0.0.1:5000/<name>
 
         - name: Render to Deploy
           if: github.ref == 'refs/heads/main' && success()
